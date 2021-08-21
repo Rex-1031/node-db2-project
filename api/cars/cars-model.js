@@ -12,7 +12,7 @@ const create = async() => {
   const [id] = await db('cars').insert(cars)
   return getById(id)
 }
-modules.exports = {
+module.exports = {
   getAll,
   getById,
   create
