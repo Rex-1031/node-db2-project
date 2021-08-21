@@ -6,7 +6,7 @@ exports.seed = async function(knex){
 }
 const cars =[
     {
-        vin: '11111111111111111',
+        vin: '1FM5K8F87EGC68775',
         make: 'Toyota',
         model: 'Rav 4',
         mileage: 84000,
@@ -14,14 +14,14 @@ const cars =[
         transmission: 'automatic'
     },
     {
-        vin: '22222222222222222',
+        vin: 'WVWNP7AN0BE791043',
         make: 'Scion',
         model: 'Xb',
         mileage: 120000,
         title: 'clean',
     },
     {
-        vin: '33333333333333333',
+        vin: '1G6DW67V180142103',
         make: 'Toyota',
         model: 'Prius',
         mileage: 50000,
