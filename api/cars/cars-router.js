@@ -9,7 +9,7 @@ const {
 
 const router = express.Router()
 
-router.get('/', async (req, res, next)=>{
+router.get('/',   async (req, res, next)=>{
     try{
         const cars = await Cars.getAll()
         res.json(cars)
@@ -19,7 +19,7 @@ router.get('/', async (req, res, next)=>{
     }
 })
 
-router.get('/:id', async(req, res, next)=>{
+router.get('/:id', checkCarId,  async(req, res, next)=>{
     try{
         const cars = await Cars.getById(req.params.id)
         res.json(cars)
@@ -29,7 +29,7 @@ router.get('/:id', async(req, res, next)=>{
     }
 })
 
-router.post('/', async(req, res, next)=>{
+router.post('/', checkVinNumberValid, checkVinNumberUnique, checkCarPayload, async(req, res, next)=>{
     try{
         const newCar = await Cars.create(req.body)
         res.json(newCar)
