@@ -24,6 +24,6 @@ const cars =[
         vin: '33333333333333333',
         make: 'Toyota',
         model: 'Prius',
-        mileage: 50000
+        mileage: 50000,
     },
 ]
